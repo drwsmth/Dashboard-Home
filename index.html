@@ -1,10 +1,263 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<title>404 Page - Testing</title>
-	</head>
-	<body>
-		<h1>Hello World!</h1>
-		<h2>Testing, Again</h2>
-	</body>
+<head>
+	<title>Status Board</title>
+	<meta name="description" content="Not much to say, just me.">
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel = "stylesheet" type = "text/css" href = "https://raw.githubusercontent.com/daneden/animate.css/master/animate.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "jelly.css"/>
+
+</head>
+
+<style>
+body {
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
+}
+
+#header {
+	background-color: none;
+	margin: none;
+	display: block;
+	width: 100%;
+	padding-bottom: 20px;
+	border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+hr {
+	display:block;
+	margin-top:.5em;
+	margin-bottom:.5em;
+	margin-left:auto;
+	margin-right:auto;
+	border-style:none;
+	background-color:rgba(255,255,255,0.5);
+}
+
+.panel_horiz {
+	background-color: rgba(255,255,255,0.1);
+	padding: 10px;
+	margin: 10px;
+	display: block;
+	width: 500px;
+	border: 2px solid rgba(255,255,255,0.2);
+	border-radius: 10px;
+	-webkit-animation: jelly 1000ms linear both;
+	animation: jelly 1000ms linear both;
+
+}
+
+.panel_horiz table {
+	min-width: 300px;
+	width: 100%;
+	white-space: wrap;
+	text-align: left;
+}
+
+.panel_horiz .transport_next {
+	width: auto;
+}
+
+.panel_horiz table td {
+	padding-right: 5px;
+}
+
+.message {
+    color: rgba(255,0,110,1);
+}
+
+#station_list {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+ 
+#station_list p {
+    padding-left: 100%;  /* show the marquee just outside the paragraph */
+    padding-right: 100%;
+    animation: marquee 10s linear infinite;
+}
+ 
+#station_list p a {
+    display: inline-block;
+}
+ 
+#station_list p a img {
+   max-width: none;
+   margin-right: 10px;
+}
+ 
+#station_list p:hover {
+    animation-play-state: paused
+}
+ 
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.panel_horiz table:last-child {
+	margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: SF UI Display;
+	letter-spacing: 0px;
+}
+
+h1 {
+	font-weight: 600;
+	font-size: 40px;
+}
+
+h4 {
+	font-weight: 800;
+	font-size: 20px;
+}
+
+h2 {
+	font-weight: 300;
+	color: rbga(255,255,0,1);
+}
+
+h5 {
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+</style>
+<body>
+	<div id="header"><h1>Good Afternoon, Drew</h1><h2>It's Sunday, the 12th of February.</h2><h2>Remember, it's cold outside so wrap up!</h2></div>
+	<br/>
+	<div class="panel_horiz">
+	<div class="message"><h2>The forecast this week looks good for a Sunday dive.</h2></div>
+	<div class="message"><h2>you have an appointment with Dr. Chadwick tomorrow at 18:00.</h2></div>
+	<div class="message"><h2>Don't forget your date on Wednesday, 15:00!</h2></div></div>
+	<br/>
+	<div class="panel_horiz"><div id="people">
+		<table>
+			<h1>People</h1>
+		<h3>People to See</h3>
+		<tr>
+		<td>Drew Smith</td>
+		<td>Elise Smith</td>
+		<td>Sarah McAuliffe</td>
+		<td>Zeb Hall</td>
+		<td>David Pegrum</td>
+		</tr>
+		</table><table>
+		<h3>Organised</h3>
+		<tr>
+		<td>Drew Smith</td>
+		<td>Elise Smith</td>
+		<td>Sarah McAuliffe</td>
+		<td>Zeb Hall</td>
+		<td>David Pegrum</td>
+		</tr>
+		</table>
+	</div>
+	</div>
+	
+	<div class="panel_horiz"><div id="planner">
+		<table>
+			<h1>People</h1>
+		<h3>People to See</h3>
+		<tr>
+		<td>Drew Smith</td>
+		<td>Elise Smith</td>
+		<td>Sarah McAuliffe</td>
+		<td>Zeb Hall</td>
+		<td>David Pegrum</td>
+		</tr>
+		</table><table>
+		<h3>Organised</h3>
+		<tr>
+		<td>Drew Smith</td>
+		<td>Elise Smith</td>
+		<td>Sarah McAuliffe</td>
+		<td>Zeb Hall</td>
+		<td>David Pegrum</td>
+		</tr>
+		</table>
+	</div>
+	</div>	
+	
+	<div class="panel_horiz"><div id="transport">
+		<table class="transport_next">
+		<h1>Next Train</h1>
+		<tr>
+			<td><h5>Leaves</h5></td>
+			<td><h5>Departure</h5></td>
+			<td><h5>Pattern</h5></td>
+		</tr>
+		<tr>
+			<td><h2>10 min</h2></td>
+			<td><h2>12:00 pm</h2></td>
+			<td><h2>C</h2></td>
+		</tr>
+		</table>
+		
+		<hr style="height:1px;">
+		
+		<h3>Stops At</h3>
+		<div id="station_list"><p>Armadale, Kelmscott, Seaforth, Armadale, Cannington, Showgrounds, Thornlie, Midland, Bayswater, Bassendean, Rockingham, Safety Bay, Ashfield</p></div>
+		
+
+		<hr style="height:1px;">
+
+		<table>
+		<h3>Then</h3>
+		<tr>
+		<td><h5>Leaves</h5></td>
+		<td><h5>Departure</h5></td>
+		<td><h5>Route</h5></td>
+		<td><h5>Walk</h5></td>
+		<td><h5>Drive</h5></td>
+	</tr>
+	<tr>
+		<td>10 Minutes</td>
+		<td>12:00</td>
+		<td>C</td>
+		<td>Not Possible</td>
+		<td>5 Minutes</td>
+	</tr>
+	<tr>
+		<td>10 Minutes</td>
+		<td>12:00</td>
+		<td>C</td>
+		<td>Not Possible</td>
+		<td>5 Minutes</td>
+	</tr>
+	<tr>
+		<td>10 Minutes</td>
+		<td>12:00</td>
+		<td>C</td>
+		<td>Not Possible</td>
+		<td>5 Minutes</td>
+	</tr>
+	<tr>
+		<td>10 Minutes</td>
+		<td>12:00</td>
+		<td>C</td>
+		<td>Not Possible</td>
+		<td>5 Minutes</td>
+	</tr>
+	<tr>
+		<td>10 Minutes</td>
+		<td>12:00</td>
+		<td>C</td>
+		<td>Not Possible</td>
+		<td>5 Minutes</td>
+	</tr>
+</table>
+
+	</div>
+	</div>
+</body>
+
 </html>
